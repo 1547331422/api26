@@ -1,0 +1,73 @@
+[2024-05-11 11:40:54] INFO [send_request: basecase.py, 33] post json data
+[2024-05-11 11:40:54] DEBUG [_new_conn: connectionpool.py, 244] Starting new HTTP connection (1): 127.0.0.1:8000
+[2024-05-11 11:40:54] DEBUG [_make_request: connectionpool.py, 546] http://127.0.0.1:8000 "POST /api/user/login HTTP/1.1" 200 274
+[2024-05-11 11:40:54] INFO [log_case_info: case_log.py, 9] 测试用例：login_ok
+[2024-05-11 11:40:54] INFO [log_case_info: case_log.py, 10] url: http://127.0.0.1:8000/api/user/login
+[2024-05-11 11:40:54] INFO [log_case_info: case_log.py, 11] 请求参数：{"userName":"student","password":"123456","remember":false}
+[2024-05-11 11:40:55] INFO [log_case_info: case_log.py, 12] 期望结果: 成功
+[2024-05-11 11:40:55] INFO [log_case_info: case_log.py, 13] 实际结果： {'code': 1, 'message': '成功', 'response': {'id': None, 'userUuid': None, 'userName': 'student', 'password': None, 'realName': None, 'age': None, 'sex': None, 'birthDay': None, 'userLevel': None, 'phone': None, 'role': None, 'status': None, 'imagePath': 'https://www.mindskip.net:9008/image/ba607a75-83ba-4530-8e23-660b72dc4953/头像.jpg', 'createTime': None, 'modifyTime': None, 'lastActiveTime': None, 'deleted': None, 'wxOpenId': None}}
+[2024-05-11 11:40:55] DEBUG [query_db: db1.py, 24] select * from t_user where user_name ='a12m14'
+[2024-05-11 11:40:55] DEBUG [query_db: db1.py, 29] None
+[2024-05-11 11:40:55] INFO [run: run_all.py, 38] ===============开始测试=====================
+[2024-05-11 11:40:55] INFO [send_request: basecase.py, 33] post json data
+[2024-05-11 11:40:55] DEBUG [_new_conn: connectionpool.py, 244] Starting new HTTP connection (1): 127.0.0.1:8000
+[2024-05-11 11:40:55] DEBUG [_make_request: connectionpool.py, 546] http://127.0.0.1:8000 "POST /api/user/login HTTP/1.1" 200 85
+[2024-05-11 11:40:55] INFO [log_case_info: case_log.py, 9] 测试用例：login_err1
+[2024-05-11 11:40:55] INFO [log_case_info: case_log.py, 10] url: http://127.0.0.1:8000/api/user/login
+[2024-05-11 11:40:55] INFO [log_case_info: case_log.py, 11] 请求参数：{"userName":"a1dm2in13","password":"123456","remember":false}
+[2024-05-11 11:40:55] INFO [log_case_info: case_log.py, 12] 期望结果: 成功
+[2024-05-11 11:40:55] INFO [log_case_info: case_log.py, 13] 实际结果： {'code': 402, 'message': '用户名或密码错误', 'response': None}
+[2024-05-11 11:40:55] INFO [send_request: basecase.py, 33] post json data
+[2024-05-11 11:40:55] DEBUG [_new_conn: connectionpool.py, 244] Starting new HTTP connection (1): 127.0.0.1:8000
+[2024-05-11 11:40:55] DEBUG [_make_request: connectionpool.py, 546] http://127.0.0.1:8000 "POST /api/user/login HTTP/1.1" 200 274
+[2024-05-11 11:40:55] INFO [log_case_info: case_log.py, 9] 测试用例：login_ok
+[2024-05-11 11:40:55] INFO [log_case_info: case_log.py, 10] url: http://127.0.0.1:8000/api/user/login
+[2024-05-11 11:40:55] INFO [log_case_info: case_log.py, 11] 请求参数：{"userName":"student","password":"123456","remember":false}
+[2024-05-11 11:40:55] INFO [log_case_info: case_log.py, 12] 期望结果: 成功
+[2024-05-11 11:40:55] INFO [log_case_info: case_log.py, 13] 实际结果： {'code': 1, 'message': '成功', 'response': {'id': None, 'userUuid': None, 'userName': 'student', 'password': None, 'realName': None, 'age': None, 'sex': None, 'birthDay': None, 'userLevel': None, 'phone': None, 'role': None, 'status': None, 'imagePath': 'https://www.mindskip.net:9008/image/ba607a75-83ba-4530-8e23-660b72dc4953/头像.jpg', 'createTime': None, 'modifyTime': None, 'lastActiveTime': None, 'deleted': None, 'wxOpenId': None}}
+[2024-05-11 11:40:55] DEBUG [query_db: db1.py, 24] select * from t_user where user_name ='student'
+[2024-05-11 11:40:55] DEBUG [query_db: db1.py, 29] (1, 'd2d29da2-dcb3-4013-b874-727626236f47', 'student', 'D1AGFL+Gx37t0NPG4d6biYP5Z31cNbwhK5w1lUeiHB2zagqbk8efYfSjYoh1Z/j1dkiRjHU+b0EpwzCh8IGsksJjzD65ci5LsnodQVf4Uj6D3pwoscXGqmkjjpzvSJbx42swwNTA+QoDU8YLo7JhtbUK2X0qCjFGpd+8eJ5BGvk=', '学生', 18, 1, datetime.datetime(2010, 8, 10, 0, 0), 1, '19171171610', 1, 1, 'https://www.mindskip.net:9008/image/ba607a75-83ba-4530-8e23-660b72dc4953/头像.jpg', datetime.datetime(2019, 9, 7, 18, 55, 2), datetime.datetime(2023, 5, 10, 16, 55, 5), None, b'\x00', None)
+[2024-05-11 11:40:55] DEBUG [query_db: db1.py, 24] select * from t_user where user_name ='a12m14'
+[2024-05-11 11:40:55] DEBUG [query_db: db1.py, 29] None
+[2024-05-11 11:40:55] DEBUG [_new_conn: connectionpool.py, 244] Starting new HTTP connection (1): 192.168.55.1:8000
+[2024-05-11 11:40:55] DEBUG [_make_request: connectionpool.py, 546] http://192.168.55.1:8000 "POST /api/user/login HTTP/1.1" 200 85
+[2024-05-11 11:40:55] DEBUG [_new_conn: connectionpool.py, 244] Starting new HTTP connection (1): 192.168.55.1:8000
+[2024-05-11 11:40:55] DEBUG [_make_request: connectionpool.py, 546] http://192.168.55.1:8000 "POST /api/user/login HTTP/1.1" 200 274
+[2024-05-11 11:40:55] DEBUG [_new_conn: connectionpool.py, 244] Starting new HTTP connection (1): 192.168.55.31:8000
+[2024-05-11 11:40:55] DEBUG [_make_request: connectionpool.py, 546] http://192.168.55.31:8000 "POST /api/student/user/register HTTP/1.1" 200 None
+[2024-05-11 11:40:55] DEBUG [test_reg_err: test_xzs_readexcel.py, 51] 用例名称为：test_reg_err
+[2024-05-11 11:40:55] INFO [test_reg_err: test_xzs_readexcel.py, 52] url: http://192.168.55.31:8000/api/student/user/register
+[2024-05-11 11:40:55] INFO [test_reg_err: test_xzs_readexcel.py, 53] 请求参数：{"userName":"student","password":"123456","userLevel":1}
+[2024-05-11 11:40:55] INFO [test_reg_err: test_xzs_readexcel.py, 54] 期望结果: {"code":2,"message":"用户已存在","response":null}
+[2024-05-11 11:40:55] INFO [test_reg_err: test_xzs_readexcel.py, 55] 实际结果： {"code":2,"message":"用户已存在","response":null}
+[2024-05-11 11:40:55] DEBUG [query_db: db1.py, 24] select * from t_user where user_name ='a12m14'
+[2024-05-11 11:40:55] DEBUG [query_db: db1.py, 29] None
+[2024-05-11 11:40:55] DEBUG [_new_conn: connectionpool.py, 244] Starting new HTTP connection (1): 192.168.55.31:8000
+[2024-05-11 11:40:55] DEBUG [_make_request: connectionpool.py, 546] http://192.168.55.31:8000 "POST /api/student/user/register HTTP/1.1" 200 None
+[2024-05-11 11:40:55] INFO [log_case_info: case_log.py, 9] 测试用例：test_reg_ok
+[2024-05-11 11:40:55] INFO [log_case_info: case_log.py, 10] url: http://192.168.55.31:8000/api/student/user/register
+[2024-05-11 11:40:55] INFO [log_case_info: case_log.py, 11] 请求参数：{"userName": "a12m14", "password": "123456", "userLevel": 1}
+[2024-05-11 11:40:55] INFO [log_case_info: case_log.py, 12] 期望结果: {"code":1,"message":"成功","response":null}
+[2024-05-11 11:40:55] INFO [log_case_info: case_log.py, 13] 实际结果： {"code":2,"message":"用户已存在","response":null}
+[2024-05-11 11:40:55] DEBUG [_new_conn: connectionpool.py, 244] Starting new HTTP connection (1): 127.0.0.1:8000
+[2024-05-11 11:40:55] DEBUG [_make_request: connectionpool.py, 546] http://127.0.0.1:8000 "POST /api/user/login HTTP/1.1" 200 274
+[2024-05-11 11:40:55] DEBUG [_new_conn: connectionpool.py, 244] Starting new HTTP connection (1): 127.0.0.1:8000
+[2024-05-11 11:40:55] DEBUG [_make_request: connectionpool.py, 546] http://127.0.0.1:8000 "POST /api/user/login HTTP/1.1" 200 85
+[2024-05-11 11:40:55] DEBUG [_new_conn: connectionpool.py, 244] Starting new HTTP connection (1): 127.0.0.1:8000
+[2024-05-11 11:40:55] DEBUG [_make_request: connectionpool.py, 546] http://127.0.0.1:8000 "POST /api/user/login HTTP/1.1" 200 85
+[2024-05-11 11:40:55] DEBUG [_new_conn: connectionpool.py, 244] Starting new HTTP connection (1): 127.0.0.1:8000
+[2024-05-11 11:40:55] DEBUG [_make_request: connectionpool.py, 546] http://127.0.0.1:8000 "POST /api/user/login HTTP/1.1" 200 85
+[2024-05-11 11:40:55] DEBUG [query_db: db1.py, 24] select * from t_user where user_name ='test1'
+[2024-05-11 11:40:55] DEBUG [query_db: db1.py, 29] (7, '61ea8846-1189-4d5f-8dad-c20b23413e5e', 'test1', 'gNx0G00BpWPWEm9pxmqH/EKYMKyw+pOE8C2YPRwYLonxfbo2g6G0A+ZJLJh5AYOPtH3bInDhcYvHAI+6vX82T3lJ80VzNXtQ+SCQ27zRE8YJuIot5AJsvliU/deStcbIsmLae+tLVmR3SrG/TFDEs5MUecq1SfOZHKor5xTua1A=', None, None, None, None, 1, None, 1, 1, None, datetime.datetime(2024, 4, 19, 17, 0, 47), None, datetime.datetime(2024, 4, 19, 17, 0, 47), b'\x00', None)
+[2024-05-11 11:40:55] DEBUG [_new_conn: connectionpool.py, 244] Starting new HTTP connection (1): 192.168.55.32:8000
+[2024-05-11 11:40:55] DEBUG [_make_request: connectionpool.py, 546] http://192.168.55.32:8000 "POST /api/student/user/register HTTP/1.1" 200 None
+[2024-05-11 11:40:55] DEBUG [query_db: db1.py, 24] select * from t_user where user_name ='peter'
+[2024-05-11 11:40:55] DEBUG [query_db: db1.py, 29] None
+[2024-05-11 11:40:55] DEBUG [_new_conn: connectionpool.py, 244] Starting new HTTP connection (1): 192.168.55.32:8000
+[2024-05-11 11:40:56] DEBUG [_make_request: connectionpool.py, 546] http://192.168.55.32:8000 "POST /api/student/user/register HTTP/1.1" 200 None
+[2024-05-11 11:40:56] DEBUG [query_db: db1.py, 24] select * from t_user where user_name ='peter'
+[2024-05-11 11:40:56] DEBUG [query_db: db1.py, 29] (202, '4f1ceed1-5c91-4ac6-8ab8-69bd4bb8b377', 'peter', 'nLWmsTfDlr2Km6KYuew8zkc2vdwSERb9O3batApB/np7Dp6RABKsv77qhj4BQKDxV56CMGU45stV4Y8J/TbOvygpwNdMhjOltPcw6ylb3vbMs0g+y/dE8GBsS881chSffMW0TQTE08rEAKxfRF8t8V8wnhfDO7ioZtabpY/rwno=', None, None, None, None, 1, None, 1, 1, None, datetime.datetime(2024, 5, 11, 11, 40, 56), None, datetime.datetime(2024, 5, 11, 11, 40, 56), b'\x00', None)
+[2024-05-11 11:40:56] DEBUG [change_db: db1.py, 42] delete from t_user where user_name='peter'
+[2024-05-11 11:40:56] ERROR [run: run_all.py, 48] 测试失败，失败用例已保存到文件: D:\4.29分类\last_fails.pickle
+[2024-05-11 11:40:56] INFO [run: run_all.py, 53] ===============测试结束=====================
+[2024-05-11 11:40:56] INFO [run: run_all.py, 55] ***************发送邮件**********************
